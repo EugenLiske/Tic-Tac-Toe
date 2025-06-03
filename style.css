@@ -1,13 +1,46 @@
-    table {
-      border-collapse: collapse;
-      margin: 20px auto;
-    }
-    td {
-      width: 60px;
-      height: 60px;
-      text-align: center;
-      vertical-align: middle;
-      font-size: 2em;
-      border: 1px solid #333;
-      cursor: pointer;
-    }
+  /* Ganze Seite: Hintergrund & Schrift */
+  body {
+    background-color: #323232;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    margin: 0;
+
+  }
+
+  h1 {
+    text-align: center;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  /* Tabelle */
+  table {
+    border-collapse: collapse;
+  }
+
+  /* Tabellenzellen */
+  td {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 2.5em;
+    border: 5px solid white;
+    border-top: none;
+    border-left: none;
+  }
+
+  /* Letzte Spalte: rechte Linie entfernen */
+  tr td:last-child {
+    border-right: none;
+  }
+
+  /* Letzte Zeile: untere Linie entfernen */
+  table tr:last-child td {
+    border-bottom: none;
+  }
