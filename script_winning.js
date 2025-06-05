@@ -3,6 +3,7 @@ let fields = Array(9).fill(null); // das ist eine andere Schreibweise für das A
 let currentPlayer = 'circle';
 let gameOver = false;
 
+
 function init() {
   render();
 }
@@ -167,4 +168,19 @@ function generateAnimatedCrossSVG() {
         <animate attributeName="stroke-dashoffset" from="${length}" to="0" begin="0.5s" dur="0.5s" fill="freeze"/>
       </line>
     </svg>`;
+}
+
+function test() {
+  let a = 1;
+  debugger; // <-- hier stoppt der Code
+  let b = 2;
+  console.log(a + b);
+}
+
+function restartGame() {
+  fields = Array(9).fill(null);      // Leeres Spielfeld
+  currentPlayer = 'circle';          // Startet wieder mit Kreis
+  const svgs = document.querySelectorAll('svg');
+  svgs.forEach(svg => svg.remove()); // Entferne evtl. Gewinnerlinie
+  render();                          // Seite neu aufbauen
 }
